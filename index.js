@@ -6,7 +6,7 @@ function init() {
   console.log("2. Display multiplication table.");
   console.log("3. Print the fibonacci sequence.");
   console.log("4. Check armstrong number.");
-  console.log("4. Print armstrong number from interval. \n");
+  console.log("5. Print armstrong number from interval. \n");
   let choice = parseInt(prompt("Please enter your choice:"));
 
   choiceSelection(choice);
@@ -79,15 +79,11 @@ function fibonacciSeries() {
 
 
   for (let i = 0; i < num; i++) {
-
-
     console.log(prevNum);
-
     let sum = prevNum + nextNum;
     prevNum = nextNum;
     nextNum = sum;
   }
-
 
 }
 
@@ -105,9 +101,11 @@ function armstrongNumVerify() {
 
 // This function will help to print amrstrong number from internval
 function armstrongNumInterval() {
-  let num = prompt("Enter the end number to check armstrong number interval.");
+  
+  let start = prompt("Enter the start number of interval.");
+  let end = prompt("Enter the end number of interval");
 
-  for (let i = 1; i <= num; i++) {
+  for (let i = start; i <= end; i++) {
     if (armstrongCheck(i)) {
       console.log(i + " is armstrong");
     } else {
