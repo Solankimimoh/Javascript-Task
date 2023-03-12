@@ -123,18 +123,13 @@ function armstrongCheck(num) {
   let armstrongNum = 0;
   let originalNum = num;
 
-  for (let i = 0; i < powerCount; i++) {
-
+  while (num > 0) {
     let reminder = Math.floor(num % 10);
     let tempNum = num / 10;
     num = tempNum;
     let powerCal = 1;
-
-    for (let j = 0; j < powerCount; j++) {
-      powerCal = powerCal * reminder;
-    }
-    armstrongNum = armstrongNum + powerCal;
-
+    
+    armstrongNum = armstrongNum +( reminder**powerCount);
   }
 
   if (armstrongNum == originalNum) {
